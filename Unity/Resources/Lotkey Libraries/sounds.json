@@ -1,0 +1,21 @@
+﻿{
+  "JsonSound": [
+    {
+      "Name": "BFSG",
+      "Path": "bfsg",
+      "Volume": 1.0,
+      "Pitch": 1.0,
+      "RandomizePitch": true,
+      "RandomPitchRange": 0.1
+    },
+
+    {
+      "Name": "BFU",
+      "Path": "bfu",
+      "Volume": 1.0,
+      "Pitch": 1.0,
+      "RandomizePitch": true,
+      "RandomPitchRange": 0.7
+    }
+  ]
+}
