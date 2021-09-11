@@ -49,7 +49,7 @@ Each field is enclosed in quotation marks and followed by a colon and a value. S
 {
   "JsonSound": [
     {
-        "Name": "example1",
+        "Name": "example name 1",
         "Path": "example1",
         "Volume": 1.0,
         "Pitch": 1.0,
@@ -57,7 +57,7 @@ Each field is enclosed in quotation marks and followed by a colon and a value. S
         "RandomPitchRange": 0.1
     },
     {
-        "Name": "example2",
+        "Name": "example name 2",
         "Path": "example2",
         "Volume": 1.0,
         "Pitch": 1.0,
@@ -129,7 +129,7 @@ These fields have defaults. They can be filled out to override the default value
 {
   "JsonSound": [
     {
-        "Name": "example1",
+        "Name": "example name 1",
         "Path": "example1",
         "Volume": 1.0,
         "Pitch": 1.0,
@@ -146,7 +146,7 @@ After adding an entry:
 {
   "JsonSound": [
     {
-        "Name": "example1",
+        "Name": "example name 1",
         "Path": "example1",
         "Volume": 1.0,
         "Pitch": 1.0,
@@ -154,7 +154,7 @@ After adding an entry:
         "RandomPitchRange": 0.1
     },
     {
-        "Name": "example2",
+        "Name": "example name 2",
         "Path": "example2",
         "Volume": 1.0,
         "Pitch": 1.0,

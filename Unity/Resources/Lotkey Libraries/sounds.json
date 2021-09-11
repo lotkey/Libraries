@@ -1,7 +1,7 @@
 ﻿{
   "JsonSound": [
     {
-      "Name": "example",
+      "Name": "example name",
       "Path": "example",
       "Volume": 1.0,
       "Pitch": 1.0,
