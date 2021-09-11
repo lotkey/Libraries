@@ -15,7 +15,7 @@ list* listCopy(list*);
 double listAt(list*, unsigned);
 double listFront(list*);
 double listBack(list*);
-double* listData(list*);
+void listData(list*, double**);
 list* listSlice(list*, unsigned, unsigned);
 
 // Math

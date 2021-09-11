@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
-#include "../StringPP/stringpp.h"
 
 #ifndef REDUCE_MEMORY_THRESHOLD
 #define REDUCE_MEMORY_THRESHOLD 0.25
@@ -80,15 +79,13 @@ double listBack(list *l) {
   return l->data[l->len - 1];
 }
 
-double* listData(list* l) {
+void listData(list* l, double** arr) {
   unsigned i;
-  double* d = malloc(sizeof(double) * l->len);
+  *arr = malloc(sizeof(double) * l->len);
 
   for (i = 0; i < l->len; i++) {
-    d[i] = l->data[i];
+    (*arr)[i] = l->data[i];
   }
-  
-  return d;
 }
 
 list* listSlice(list* l, unsigned start, unsigned end) {
@@ -318,9 +315,7 @@ void listPrint(list* l) {
       printf("%i ", (int)l->data[i]);
     }
     else {
-      char* string = ftoa(l->data[i]);
-      printf("%s ", string);
-      free(string);
+      printf("%f ", l->data[i]);
     }
   }
   
