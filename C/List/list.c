@@ -27,6 +27,7 @@ static void listMergeSort(list*, unsigned, unsigned);
 static double listMemoryUsed(list*);
 static void listDoubleMemory(list*);
 static void listHalveMemory(list*);
+static void listClearMemory(list*);
 
 
 // ==============================
@@ -402,4 +403,11 @@ static void listHalveMemory(list* l) {
   if (newSize - (unsigned int)newSize > 0.50f) newSize += 1.0;
   l->size = (unsigned int)newSize;
   l->data = realloc(l->data, newSize);
+}
+
+
+static void listClearMemory(list* l) {
+    free(l->data);
+    l->len = 0;
+    l->size = 0;
 }
