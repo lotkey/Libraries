@@ -1,5 +1,5 @@
 # list
-Opaque C struct for a dynamic list
+Opaque C struct for a dynamic list of doubles
 
 ## Public methods
 
