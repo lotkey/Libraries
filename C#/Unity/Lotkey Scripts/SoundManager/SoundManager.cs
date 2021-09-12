@@ -294,7 +294,7 @@ public static class SoundManager
 
         // Fields for controlling parameters
         public float localVolume = 1f;
-        public float pitch = 1f;
+        public float pitch = 0f;
         public bool randomizePitch = false;
         public float randomPitchRange = 0f;
 
@@ -362,9 +362,24 @@ public static class SoundManager
         private void Randomize()
         {
             if (!randomizePitch) return; // Do not randomize
-            float max = randomPitchRange / 2f; // Maximum pitch increase allowed
-            float min = -randomPitchRange / 2f; // Maximum pitch decrease allowed
-            source.pitch = pitch + Random.Range(min, max); // Sets the AudioSource's pitch to the random pitch
+            float max = randomPitchRange; // Maximum pitch increase allowed
+            float min = -randomPitchRange; // Maximum pitch decrease allowed
+            float semitones = pitch + Random.Range(min, max); // Number of semitones to change the pitch by
+            source.pitch = SemitoneToPitchMultiplier(semitones); // Sets the AudioSource's pitch to the random pitch
+        }
+
+        /// <summary>
+        /// Returns an amount to multiply by a frequency to shift a certain amount of semitones. <br/>
+        /// Ex: <br/>
+        /// SemitoneToPitchMultiplier(0.0) = 1.0 <br/>
+        /// SemitoneToPitchMultiplier(12.0) = 2.0 <br/>
+        /// SemitoneToPitchMultiplier(-12.0) = 0.5
+        /// </summary>
+        /// <param name="numSemitones"> Number of semitones to shift </param>
+        /// <returns> A float to multiply the pitch of something by to shift a certain amount of semitones </returns>
+        private static float SemitoneToPitchMultiplier(float numSemitones)
+        {
+            return Mathf.Pow(1.059463094, numSemitones);
         }
     }
 
