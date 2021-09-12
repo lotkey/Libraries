@@ -87,7 +87,7 @@ These fields have defaults. They can be filled out to override the default value
 "Tag"
  - String value
  - Default value is *"untagged"*
- - Can be used to randomly play a sound from a tag (impact sounds such as footsteps)
+ - Can be used to randomly play a sound from a tag (useful for impact sounds such as footsteps, for example)
 
 "Volume"
  - Floating point number in *[0.0, 1.0]*
