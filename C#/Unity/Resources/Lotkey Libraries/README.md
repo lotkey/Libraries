@@ -2,7 +2,7 @@
 
 ## Overview
 
-*sounds.json* contains information about each sound to be loaded in JSON (JavaScript Object Notation). This makes it easy to automate loading audio. Say goodbye to clicking and dragging game objects in the Unity editor.
+*sounds.json* contains information about each sound to be loaded in JSON (JavaScript Object Notation). This makes it easy to automate loading audio. Say goodbye to clicking and dragging game objects in the Unity editor. Just add your sound files to *./Sounds/* and add the necessary changes to *sounds.json* detailed below.
 
 ## Structure
 
