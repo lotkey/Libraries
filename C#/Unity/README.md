@@ -4,6 +4,6 @@ To use these Unity libraries:
 - Place *./Resources/* in the *Assets/* directory of your Unity project 
   - If *Assets/Resources/* already exists in your Unity project, place the contents of *./Resources/* in *Assets/Resources/*
 - Place *./Lotkey Scripts/* in the *Assets/* directory of your Unity project
-- Read [./Resources/Lotkey Libraries/README.md](the documentation)
+- Read [the documentation](./Resources/Lotkey Libraries/README.md)
 - Add your own sounds
 - Call SoundManager methods in your code! 
