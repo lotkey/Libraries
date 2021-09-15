@@ -71,6 +71,9 @@ public static class SoundManager
             sounds[tagIndex].Add(s); // Add the Sound to the list with the same tag
         }
 
+        // Next section moves the "untagged" section to the first index
+        // Assumption is that many sounds will be untagged
+        // Intent is to make searching for untagged items fastest
         int untaggedIndex = tags.IndexOf("untagged");
         if (tags.Count > 1 && untaggedIndex != -1 && untaggedIndex != 0)
         {
@@ -379,7 +382,7 @@ public static class SoundManager
         /// <returns> A float to multiply the pitch of something by to shift a certain amount of semitones </returns>
         private static float SemitoneToPitchMultiplier(float numSemitones)
         {
-            return Mathf.Pow(1.059463094, numSemitones);
+            return Mathf.Pow(1.059463094f, numSemitones);
         }
     }
 

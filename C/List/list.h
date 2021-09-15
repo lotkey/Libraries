@@ -1,5 +1,5 @@
-#ifndef LIST_H_MCVI
-#define LIST_H_MCVI
+#ifndef LOTKEY_C_LIST_H
+#define LOTKEY_C_LIST_H
 
 #define PRINT_MAX_DIGITS
 
