@@ -1,12 +1,12 @@
-#ifndef LOTKEY_CPP_SINEOSCILLATOR_H
-#define LOTKEY_CPP_SINEOSCILLATOR_H
+#ifndef LOTKEY_CPP_SQUAREOSCILLATOR_H
+#define LOTKEY_CPP_SQUAREOSCILLATOR_H
 
 #include "Oscillators.h"
 
 /// <summary>
-/// Sine Oscillator class
+/// Square Oscillator class
 /// </summary>
-class Oscillators::SineOscillator : public Oscillators::Oscillator {
+class Oscillators::Square : public Oscillators::Oscillator {
 private:
 	float sampleRate = 48000;
 	double angleDelta = 0.0f;
@@ -17,12 +17,12 @@ public:
 	/// <summary>
 	/// Default constructor
 	/// </summary>
-	SineOscillator() {}
+	Square() {}
 	/// <summary>
 	/// Constructor from sample rate
 	/// </summary>
 	/// <param name="sampleRate"> - sample rate (Hz) </param>
-	SineOscillator(const float& sampleRate);
+	Square(const float& sampleRate);
 	/// <summary>
 	/// Set the sample rate of the oscillator
 	/// </summary>

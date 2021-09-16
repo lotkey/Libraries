@@ -1,12 +1,12 @@
-#ifndef LOTKEY_CPP_SAWOSCILLATOR_H
-#define LOTKEY_CPP_SAWOSCILLATOR_H
+#ifndef LOTKEY_CPP_TRIANGLEOSCILLATOR_H
+#define LOTKEY_CPP_TRIANGLEOSCILLATOR_H
 
 #include "Oscillators.h"
 
 /// <summary>
-/// Saw Oscillator class
+/// Triangle Oscillator class
 /// </summary>
-class Oscillators::SawOscillator : public Oscillators::Oscillator {
+class Oscillators::Triangle : public Oscillators::Oscillator {
 private:
 	float sampleRate = 48000;
 	double angleDelta = 0.0f;
@@ -17,12 +17,12 @@ public:
 	/// <summary>
 	/// Default constructor
 	/// </summary>
-	SawOscillator() {}
+	Triangle() {}
 	/// <summary>
 	/// Constructor from sample rate
 	/// </summary>
 	/// <param name="sampleRate"> - sample rate (Hz) </param>
-	SawOscillator(const float& sampleRate);
+	Triangle(const float& sampleRate);
 	/// <summary>
 	/// Set the sample rate of the oscillator
 	/// </summary>

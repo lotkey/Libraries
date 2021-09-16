@@ -1,20 +1,20 @@
 #include <cmath>
 #include "SineOscillator.h"
 
-void Oscillators::SineOscillator::updateAngleDelta(const double& frequency) {
+void Oscillators::Sine::updateAngleDelta(const double& frequency) {
     double cyclesPerSample = frequency / sampleRate;
     angleDelta = cyclesPerSample * 2.0 * PI;
 }
 
-Oscillators::SineOscillator::SineOscillator(const float& sampleRate) {
+Oscillators::Sine::Sine(const float& sampleRate) {
     this->sampleRate = sampleRate;
 }
 
-void Oscillators::SineOscillator::setSampleRate(const float& sampleRate) {
+void Oscillators::Sine::setSampleRate(const float& sampleRate) {
     this->sampleRate = sampleRate;
 }
 
-float* Oscillators::SineOscillator::getBlock(const float& frequency, const unsigned& blockSize) {
+float* Oscillators::Sine::getBlock(const float& frequency, const unsigned& blockSize) {
     updateAngleDelta(frequency);
     float* block = new float[blockSize];
     for (unsigned i = 0; i < blockSize; i++) {
@@ -24,7 +24,7 @@ float* Oscillators::SineOscillator::getBlock(const float& frequency, const unsig
     return block;
 }
 
-float* Oscillators::SineOscillator::getBlock(const float& frequency, const unsigned& blockSize, const float& amplitude) {
+float* Oscillators::Sine::getBlock(const float& frequency, const unsigned& blockSize, const float& amplitude) {
     updateAngleDelta(frequency);
     float* block = new float[blockSize];
     for (unsigned i = 0; i < blockSize; i++) {
@@ -34,7 +34,7 @@ float* Oscillators::SineOscillator::getBlock(const float& frequency, const unsig
     return block;
 }
 
-float* Oscillators::SineOscillator::writeBlock(const float& frequency, const unsigned& blockSize, const float* block) {
+float* Oscillators::Sine::writeBlock(const float& frequency, const unsigned& blockSize, const float* block) {
     updateAngleDelta(frequency);
     for (unsigned i = 0; i < blockSize; i++) {
         block[i] = (float)std::sin(currentAngle);
@@ -43,7 +43,7 @@ float* Oscillators::SineOscillator::writeBlock(const float& frequency, const uns
     return block;
 }
 
-float* Oscillators::SineOscillator::writeBlock(const float& frequency, const unsigned& blockSize, const float& amplitude, const float* block) {
+float* Oscillators::Sine::writeBlock(const float& frequency, const unsigned& blockSize, const float& amplitude, const float* block) {
     updateAngleDelta(frequency);
     for (unsigned i = 0; i < blockSize; i++) {
         block[i] = (float)std::sin(currentAngle);

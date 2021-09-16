@@ -1,20 +1,20 @@
 #include <cmath>
 #include "SquareOscillator.h"
 
-void Oscillators::SquareOscillator::updateAngleDelta(const double& frequency) {
+void Oscillators::Square::updateAngleDelta(const double& frequency) {
 	double cyclesPerSample = frequency / sampleRate;
 	angleDelta = cyclesPerSample * 2.0;
 }
 
-Oscillators::SquareOscillator::SquareOscillator(const float& sampleRate) {
+Oscillators::Square::Square(const float& sampleRate) {
 	this->sampleRate = sampleRate;
 }
 
-void Oscillators::SquareOscillator::setSampleRate(const float& sampleRate) {
+void Oscillators::Square::setSampleRate(const float& sampleRate) {
 	this->sampleRate = sampleRate;
 }
 
-float* Oscillators::SquareOscillator::getBlock(const float& frequency, const unsigned& blockSize) {
+float* Oscillators::Square::getBlock(const float& frequency, const unsigned& blockSize) {
 	updateAngleDelta(frequency);
 	float* block = new float[blockSize];
 	for (unsigned i = 0; i < blockSize; i++) {
@@ -25,7 +25,7 @@ float* Oscillators::SquareOscillator::getBlock(const float& frequency, const uns
 	return block;
 }
 
-float* Oscillators::SquareOscillator::getBlock(const float& frequency, const unsigned& blockSize, const float& amplitude) {
+float* Oscillators::Square::getBlock(const float& frequency, const unsigned& blockSize, const float& amplitude) {
 	updateAngleDelta(frequency);
 	float* block = new float[blockSize];
 	for (unsigned i = 0; i < blockSize; i++) {
@@ -37,7 +37,7 @@ float* Oscillators::SquareOscillator::getBlock(const float& frequency, const uns
 	return block;
 }
 
-float* Oscillators::SquareOscillator::writeBlock(const float& frequency, const unsigned& blockSize, const float* block) {
+float* Oscillators::Square::writeBlock(const float& frequency, const unsigned& blockSize, const float* block) {
 	updateAngleDelta(frequency);
 	for (unsigned i = 0; i < blockSize; i++) {
 		float angleMod = std::fmod(currentAngle, 2.0f) - 1.0f;
@@ -46,7 +46,7 @@ float* Oscillators::SquareOscillator::writeBlock(const float& frequency, const u
 	}
 }
 
-float* Oscillators::SquareOscillator::writeBlock(const float& frequency, const unsigned& blockSize, const float& amplitude, const float* block) {
+float* Oscillators::Square::writeBlock(const float& frequency, const unsigned& blockSize, const float& amplitude, const float* block) {
 	updateAngleDelta(frequency);
 	for (unsigned i = 0; i < blockSize; i++) {
 		float angleMod = std::fmod(currentAngle, 2.0f) - 1.0f;

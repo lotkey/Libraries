@@ -1,12 +1,12 @@
-#ifndef LOTKEY_CPP_SQUAREOSCILLATOR_H
-#define LOTKEY_CPP_SQUAREOSCILLATOR_H
+#ifndef LOTKEY_CPP_JUCE_SAW_H
+#define LOTKEY_CPP_JUCE_SAW_H
 
 #include "Oscillators.h"
 
 /// <summary>
-/// Square Oscillator class
+/// Saw Oscillator class
 /// </summary>
-class Oscillators::SquareOscillator : public Oscillators::Oscillator {
+class Oscillators::Saw : public Oscillators::Oscillator {
 private:
 	float sampleRate = 48000;
 	double angleDelta = 0.0f;
@@ -17,12 +17,12 @@ public:
 	/// <summary>
 	/// Default constructor
 	/// </summary>
-	SquareOscillator() {}
+	Saw() {}
 	/// <summary>
 	/// Constructor from sample rate
 	/// </summary>
 	/// <param name="sampleRate"> - sample rate (Hz) </param>
-	SquareOscillator(const float& sampleRate);
+	Saw(const float& sampleRate);
 	/// <summary>
 	/// Set the sample rate of the oscillator
 	/// </summary>

@@ -1,12 +1,12 @@
-#ifndef LOTKEY_CPP_TRIANGLEOSCILLATOR_H
-#define LOTKEY_CPP_TRIANGLEOSCILLATOR_H
+#ifndef LOTKEY_CPP_SINEOSCILLATOR_H
+#define LOTKEY_CPP_SINEOSCILLATOR_H
 
 #include "Oscillators.h"
 
 /// <summary>
-/// Triangle Oscillator class
+/// Sine Oscillator class
 /// </summary>
-class Oscillators::TriangleOscillator : public Oscillators::Oscillator {
+class Oscillators::Sine : public Oscillators::Oscillator {
 private:
 	float sampleRate = 48000;
 	double angleDelta = 0.0f;
@@ -17,12 +17,12 @@ public:
 	/// <summary>
 	/// Default constructor
 	/// </summary>
-	TriangleOscillator() {}
+	Sine() {}
 	/// <summary>
 	/// Constructor from sample rate
 	/// </summary>
 	/// <param name="sampleRate"> - sample rate (Hz) </param>
-	TriangleOscillator(const float& sampleRate);
+	Sine(const float& sampleRate);
 	/// <summary>
 	/// Set the sample rate of the oscillator
 	/// </summary>
