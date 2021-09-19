@@ -117,7 +117,7 @@ These fields have defaults. They can be filled out to override the default value
  - Positive floating point number
  - Default value is *0.0*
  - Controls how much the pitch is randomized from the base pitch (in semitones)
- - Random pitch is selected from *[base pitch - random pitch range, base pitch + random pitch range]*
+ - Random pitch is selected from *["Pitch" - "RandomPitchRange", "Pitch" + "RandomPitchRange"]*
 
  ## Adding an Entry
 
