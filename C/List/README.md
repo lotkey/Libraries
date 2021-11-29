@@ -96,7 +96,7 @@ double sum = listSum(l);
 ```
 
 ### double listAverage(list*)
-Returns the average of all elemements in the list.
+Returns the average of all elements in the list.
 
 ```
 double ave = listAverage(l);
